@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastros Dinâmicos</title>
+    <link rel="stylesheet" href="/public/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+
+   
+
+</head>
+<body>
+
+    
+
+
+    <div class="sidebar">
+        <h2>Cadastros</h2>
+        <ul>
+            <li><a href="#" data-target="formulario-cad-instituicao"><i class="fa-solid fa-building-columns"></i> Instituição</a></li>
+            <li><a href="#" data-target="formulario-cad-orgao"><i class="fa-solid fa-building"></i> Órgão</a></li>
+            <li><a href="#" data-target="formulario-cad-escola"><i class="fa-solid fa-school"></i> Escola ▼ </a>
+                <ul class="submenu_escola">
+                    <li><a href="#" data-target="modalidade-ensino">Modalidade de ensino</a></li>
+                    <li><a href="#" data-target="series">Séries</a></li>
+                    <li><a href="#" data-target="turmas">Turmas</a></li>
+                </ul>
+            </li>
+            <li><a href="#" data-target="formulario-cad-aluno"><i class="fa-solid fa-user-graduate"></i> Aluno</a></li>
+            <li><a href="#" data-target="servidor"><i class="fa-solid fa-users"></i> Servidores</a></li>
+            <li><a href="#" data-target="funcao"><i class="fa-regular fa-keyboard"></i> Função</a></li>
+            <li><a href="#" data-target="servidor"><i class="fa-solid fa-user-plus"></i> Servidor</a></li>
+            <li><a href="#" data-target="matriculas"><i class="fa-regular fa-folder"></i> Matriculas ▼ </a>
+                <ul class="submenu_matriculas">
+                    <li><a href="#" data-target="enturmacao">Enturmação</a></li>
+                    <li><a href="#" data-target="inserir-professor">Inserir Professor</a></li>
+                    <li><a href="#" data-target="gerar-matricula">Gerar Matricula</a></li>
+                </ul>
+            </li>
+            <li><a href="#" data-target="inventario"><i class="fa-solid fa-folder-open"></i> Inventário ▼ </a>
+                <ul class="submenu_eixos">
+                    <li><a href="#" data-target="eixos-inventario"><i class=""></i> Eixos</a></li>
+                    <li><a href="#" data-target="proposta-inventario"><i class=""></i> Proposta</a></li>
+                    <li><a href="#" data-target="habilidade-inventario"><i class=""></i> Habilidades</a></li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>Inventarios</h2>
+        <ul>
+            <li><a href="#" data-target="formulario-eixos"><i class="fa-solid fa-shapes"></i> Eixo Comunicação Linguagem</a></li>
+            <li><a href="#" data-target="formulario-eixos-comportamento"><i class="fa-solid fa-shapes"></i> Eixo Comportamento</a></li>
+            <li><a href="#" data-target="formulario-eixos-socioemocional"><i class="fa-solid fa-shapes"></i> Eixo Interação socioemocional</a></li>
+            <li><a href="#" data-target="formulario-propostas"><i class="fa-solid fa-handshake"></i> Proposta</a></li>
+            <li><a href="#" data-target="formulario-habilidades"><i class="fa-regular fa-pen-to-square"></i> Habilidades</a></li>
+        </ul>
+
+        <h2>Migrações</h2>
+        <ul>
+            <li><a href="#" data-target="formulario-mig-escola"><i class="fa-solid fa-code-branch"></i> Migrar Escola</a></li>
+            <li><a href="#" data-target="formulario-mig-aluno"><i class="fa-solid fa-sitemap"></i> Migrar Aluno</a></li>
+        </ul>
+
+        <h2>Controles</h2>
+        <ul>
+            <li><a href="#" data-target="formulario-cad-usuarios"><i class="fa-solid fa-address-card"></i> Cadastro de usuários</a></li>
+        </ul>
+    </div>
+    
+    <div id="formulario-container"></div> 
+
+    
+    
+        <!-- Biblioteca Inputmask -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/5.0.7/inputmask.min.js"></script>
+
+
+    
+    <script src="/public/js/script.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            function configurarEventosFormulario() {
+                const fileInput = document.getElementById('file');
+                const fileChosen = document.getElementById('file-chosen');
+                if (fileInput && fileChosen) {
+                    fileInput.addEventListener('change', () => {
+                        if (fileInput.files.length > 0) {
+                            fileChosen.textContent = fileInput.files[0].name; // Exibe o nome do arquivo selecionado
+                        } else {
+                            fileChosen.textContent = "Nenhum arquivo escolhido"; // Caso o input seja limpo
+                        }
+                    });
+                }
+            }
+    
+            // Observa mudanças no contêiner onde os formulários são carregados
+            const observer = new MutationObserver(() => {
+                if (document.getElementById('file')) {
+                    configurarEventosFormulario(); // Configura os eventos do formulário
+                }
+            });
+    
+            observer.observe(document.getElementById('formulario-container'), { childList: true });
+        });
+    </script>
+    
+    
+
+
+
+</body>
+</html>

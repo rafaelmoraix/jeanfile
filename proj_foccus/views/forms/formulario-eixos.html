@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário Dinâmico</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 20px;
+    }
+    .form-container {
+      max-width: 800px;
+      background: #ffffff;
+      padding: 20px;
+      margin: auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    h1 {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: #555;
+    }
+    .form-group select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    .checkbox-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .checkbox-group label {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      background: #f7f7f7;
+      padding: 8px;
+      border-radius: 5px;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    .checkbox-group input {
+      margin-right: 10px;
+      transform: scale(1.2);
+    }
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background: #4CAF50;
+      color: #fff;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <!-- Título -->
+  <h1>Formulário de Tópicos</h1>
+  
+  <!-- Campo de seleção de tópico -->
+  <div class="form-group">
+    <label for="topic-select">Selecione um tópico:</label>
+    <select id="topic-select" name="topic" required>
+      <option value="" disabled selected>Escolha um tópico</option>
+      <option value="Amplia gradativamente seu vocabulário?">Amplia gradativamente seu vocabulário?</option>
+      <option value="Apresenta entonação vocal, com boa articulação e ritmo adequado?">Apresenta entonação vocal, com boa articulação e ritmo adequado?</option>
+      <option value="Ativa conhecimentos prévios em situações de novas aprendizagens?">Ativa conhecimentos prévios em situações de novas aprendizagens?</option>
+      <option value="Categoriza diferentes elementos de acordo com critérios preestabelecidos?">Categoriza diferentes elementos de acordo com critérios preestabelecidos?</option>
+      <option value="Compreende o uso de gestos/comunicação não verbal?">Compreende o uso de gestos/comunicação não verbal?</option>
+      <option value="Compreende que pode receber ajuda de pessoas conhecidas que estão ao seu redor?">Compreende que pode receber ajuda de pessoas conhecidas que estão ao seu redor?</option>
+      <option value="Comunica fatos, acontecimentos e ações de seu cotidiano de modo compreensível, ainda que não seja por meio da linguagem verbal?">Comunica fatos, acontecimentos e ações de seu cotidiano de modo compreensível, ainda que não seja por meio da linguagem verbal?</option>
+      <option value="Comunica suas necessidades básicas (banheiro, água, comida, entre outros)?">Comunica suas necessidades básicas (banheiro, água, comida, entre outros)?</option>
+      <option value="Entende as expressões faciais em uma conversa?">Entende as expressões faciais em uma conversa?</option>
+      <option value="Executa mais de um comando sequencialmente?">Executa mais de um comando sequencialmente?</option>
+      <option value="Expressa-se oralmente com clareza e objetividade?">Expressa-se oralmente com clareza e objetividade?</option>
+      <option value="Faz uso de expressões faciais para se comunicar?">Faz uso de expressões faciais para se comunicar?</option>
+      <option value="Faz uso de gestos para comunicar-se?">Faz uso de gestos para comunicar-se?</option>
+      <option value="Identifica diferentes objetos, ampliando seu repertório?">Identifica diferentes objetos, ampliando seu repertório?</option>
+      <option value="Identifica semelhanças e diferenças entre elementos?">Identifica semelhanças e diferenças entre elementos?</option>
+      <option value="Inicia uma situação comunicativa?">Inicia uma situação comunicativa?</option>
+      <option value="Mantem uma situação comunicativa?">Mantem uma situação comunicativa?</option>
+      <option value="Nomeia as pessoas que fazem parte de sua rede de apoio?">Nomeia as pessoas que fazem parte de sua rede de apoio?</option>
+      <option value="Nomeia diferentes objetos, ampliando seu vocabulário?">Nomeia diferentes objetos, ampliando seu vocabulário?</option>
+      <option value="Possui autonomia para se comunicar, mesmo nas situações que geram conflito?">Possui autonomia para se comunicar, mesmo nas situações que geram conflito?</option>
+      <option value="Realiza pareamento?">Realiza pareamento?</option>
+      <option value="Reconhece e pareia elementos idênticos ou diferentes?">Reconhece e pareia elementos idênticos ou diferentes?</option>
+      <option value="Reconhece visualmente os estímulos apresentados?">Reconhece visualmente os estímulos apresentados?</option>
+      <option value="Refere-se a si mesmo em primeira pessoa?">Refere-se a si mesmo em primeira pessoa?</option>
+      <option value="Respeita o turno de fala?">Respeita o turno de fala?</option>
+      <option value="Responde ao ouvir seu nome?">Responde ao ouvir seu nome?</option>
+      <option value="Solicita ajuda de pessoas que estão ao seu redor, quando necessária?">Solicita ajuda de pessoas que estão ao seu redor, quando necessária?</option>
+      <option value="Utiliza linguagem não verbal para comunicar-se?">Utiliza linguagem não verbal para comunicar-se?</option>
+      <option value="Utiliza linguagem verbal para comunicar-se?">Utiliza linguagem verbal para comunicar-se?</option>
+      <option value="Utiliza respostas simples para se comunicar?">Utiliza respostas simples para se comunicar?</option>
+      <option value="Utiliza vocabulário adequado, de acordo com seu nível de desenvolvimento?">Utiliza vocabulário adequado, de acordo com seu nível de desenvolvimento?</option>
+
+      <!-- Adicione mais tópicos aqui se necessário -->
+    </select>
+  </div>
+  
+  <!-- Formulário -->
+  <form id="dynamic-form">
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="question[]" value="ATCM01 - Quem pode me ajudar?"> ATCM01 - Quem pode me ajudar?</label>
+      <label><input type="checkbox" name="question[]" value="ATCM02 - A mágica da gentileza?"> ATCM02 - A mágica da gentileza?</label>
+      <label><input type="checkbox" name="question[]" value="ATCP03 - A ordem é..."> ATCP03 - A ordem é...</label>
+      <label><input type="checkbox" name="question[]" value="ATCM04 - Que animal é esse?"> ATCM04 - Que animal é esse?</label>
+      <label><input type="checkbox" name="question[]" value="ATCP05 - Positivo e negativo"> ATCP05 - Positivo e negativo</label>
+      <label><input type="checkbox" name="question[]" value="ATCM06 - Cards de Comunicação"> ATCM06 - Cards de Comunicação</label>
+      <label><input type="checkbox" name="question[]" value="ATCM07 - Ache e junte"> ATCM07 - Ache e junte</label>
+      <label><input type="checkbox" name="question[]" value="ATCM08 - Onde encaixa?"> ATCM08 - Onde encaixa?</label>
+      <label><input type="checkbox" name="question[]" value="ATCM09 - 1, 2, 3... acerte uma vez"> ATCM09 - 1, 2, 3... acerte uma vez</label>
+      <label><input type="checkbox" name="question[]" value="ATIS10 - Emocionômetro"> ATIS10 - Emocionômetro</label>
+      <label><input type="checkbox" name="question[]" value="ATCP12 - Minha rotina"> ATCP12 - Minha rotina</label>
+      <label><input type="checkbox" name="question[]" value="ATCP13 - PIQUENIQUE"> ATCP13 - PIQUENIQUE</label>
+      <label><input type="checkbox" name="question[]" value="ATCM14 - Eu vou"> ATCM14 - Eu vou</label>
+      <label><input type="checkbox" name="question[]" value="ATIS15 - Nomeando as emoções"> ATIS15 - Nomeando as emoções</label>
+      <label><input type="checkbox" name="question[]" value="ATCP16 - Mexe e remexe"> ATCP16 - Mexe e remexe</label>
+      <label><input type="checkbox" name="question[]" value="ATIS17 - Eu como sou!"> ATIS17 - Eu como sou!</label>
+      <label><input type="checkbox" name="question[]" value="NTIS01 - Cortando o Cabelo"> NTIS01 - Cortando o Cabelo</label>
+      <label><input type="checkbox" name="question[]" value="NTCP2 - Hora do intervalo"> NTCP2 - Hora do intervalo</label>
+      <label><input type="checkbox" name="question[]" value="NTIS03 - A professora faltou"> NTIS03 - A professora faltou</label>
+      <label><input type="checkbox" name="question[]" value="ATCM14 - NTIS04 - Ano Novo, turma nova"> NTIS04 - Ano Novo, turma nova</label>
+      <!-- Continue adicionando perguntas aqui -->
+    </div>
+
+    <button type="submit">Enviar</button>
+  </form>
+</div>
+
+<script>
+  const form = document.getElementById('dynamic-form');
+  const topicSelect = document.getElementById('topic-select');
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault(); // Evita o recarregamento da página
+
+    const selectedTopic = topicSelect.value;
+    if (!selectedTopic) {
+      alert('Por favor, selecione um tópico antes de enviar.');
+      return;
+    }
+
+    alert(`Formulário enviado para o tópico: ${selectedTopic}`);
+    form.reset();
+  });
+</script>
+
+</body>
+</html>

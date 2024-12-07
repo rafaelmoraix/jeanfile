@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #023047;
+        }
+
+        .navbar {
+            background-color: #e76f51; /* Laranja mais forte */
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding: 15px 30px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px;
+            font-weight: 600;
+            margin-left: 20px;
+            transition: all 0.3s;
+        }
+
+        .navbar a:hover {
+            color: #ffad62; /* Laranja claro para hover */
+        }
+
+        .page {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: calc(100vh - 70px); /* Subtraindo a altura da barra de navegação */
+            background: linear-gradient(135deg, #f4a261, #e76f51); /* Degradê do laranja claro ao laranja forte */
+            gap: 30px;
+        }
+
+        #minhaImagem {
+            width: 600px; /* Aumentei o tamanho da imagem */
+            height: auto; /* Mantém a proporção da imagem */
+        }
+
+        .formLogin {
+            display: flex;
+            flex-direction: column;
+            background-color: #fff;
+            border-radius: 7px;
+            padding: 40px;
+            box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+            gap: 10px;
+            max-width: 400px;
+        }
+
+        .formLogin h1 {
+            margin: 0;
+            font-weight: 500;
+            font-size: 2.3em;
+            color: #e76f51; /* Laranja principal */
+        }
+
+        .formLogin p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .formLogin label {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .formLogin input {
+            padding: 15px;
+            font-size: 14px;
+            border: 1px solid #ccc;
+            margin-bottom: 20px;
+            margin-top: 5px;
+            border-radius: 4px;
+            transition: all linear 160ms;
+            outline: none;
+        }
+
+        .formLogin input:focus {
+            border: 1px solid #e76f51; /* Laranja no foco */
+        }
+
+        .formLogin a {
+            font-size: 13px;
+            color: #555;
+            text-decoration: none;
+            transition: all linear 160ms;
+        }
+
+        .formLogin a:hover {
+            color: #e76f51;
+        }
+
+        .btn {
+            background-color: #e76f51;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 600;
+            border: none;
+            padding: 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all linear 160ms;
+        }
+
+        .btn:hover {
+            background-color: #f4a261;
+            transform: scale(1.05);
+        }
+    </style>
+    <script>
+        function compararValor() {
+            // Pegando os valores dos inputs
+            var nome = document.getElementById("usuario").value;
+            var senha = document.getElementById("senha").value;
+        
+            // Verificando se ambos os campos foram preenchidos
+            if (nome === "" || senha === "") {
+                alert("Por favor, preencha todos os campos.");
+                return; // Não faz mais nada se os campos estiverem vazios
+            }
+        
+            // Comparando o valor do usuário
+            if (nome === "foccus" && senha === "123") { // Ajuste conforme a lógica desejada
+                alert("Login bem-sucedido!");
+                window.location.href = "index.html"; // Redireciona após login correto
+            } else {
+                alert("Usuário ou senha incorretos.");
+                window.location.href = "index.html";
+            }
+        }
+    </script>
+</head>
+<body>
+    <!-- Barra de navegação -->
+    <div class="navbar">
+        <a href="#quem-somos">Quem Somos Nós</a>
+        <a href="#contato">Contato</a>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div class="page">
+        <!-- Imagem à esquerda -->
+        <img src="/public/img/img-menu.svg" alt="Imagem representativa" id="minhaImagem">
+        
+        <!-- Card de Login -->
+        <div class="formLogin">
+            <h1>Login</h1>
+            <p>Digite os seus dados de acesso no campo abaixo.</p>
+            <label for="usuario">Usuário</label>
+            <input type="text" name="usuario" id="usuario" placeholder="Digite seu usuário" autofocus>
+            <label for="senha">Senha</label>
+            <input type="password" name="senha" id="senha" placeholder="Digite sua senha">
+            <a href="/">Esqueci minha senha</a>
+            <button class="btn" onclick="compararValor()">Acessar</button>
+        </div>
+    </div>
+</body>
+</html>

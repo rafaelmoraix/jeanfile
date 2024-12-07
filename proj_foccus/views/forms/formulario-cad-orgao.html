@@ -1,0 +1,105 @@
+<div id="formulario-cad-orgao" class="formulario"> 
+    <form action="../incluir_orgao.php" method="POST">
+        <h2>Cadastro de Orgão</h2>
+        <section>
+            <div class="elemento">
+                <div>
+                    <label> Razão Social<br></br></label>
+                    <input class="inputgeral" style="width: 100%;" type='text' name = "desc_org" id = "desc_org"placeholder='Digite o nome do orgão' autoComplete='off'/>
+                </div>
+            </div>
+            
+
+            <div class="elemento">
+                <div>
+                    <label> Cnpj <br></br></label>
+                    <input class="inputgeral" style="width: 100%;" type='text' name = "cnpj_org" id="cnpj_org" placeholder='__.___.___/___-__  ' autoComplete='off'/>
+                </div>
+            </div>
+
+       
+            <div class="elemento">
+                <div>
+                    <label> Endereço<br></br></label>
+                    <input class="inputgeral" style="width: 100%;" type='text' name = "endereco_org" id="endereco_org"placeholder='Digite seu endereço' autoComplete='off'/>
+                </div>
+            </div>
+            <div class="elemento">
+                <div>
+                    <label> Bairro<br></br></label>
+                    <input class="inputgeral" style="width: 100%;" type='text' name = "bairro_org" id="bairro_org" placeholder='Digite seu bairro' autoComplete='off'/>
+                </div>
+            </div>
+            <div class="elemento">
+                <div>
+                    <label> Municipio<br></br></label>
+                    <input class="inputgeral" style="width: 100%;" type='text' name = "municipio_org" id="municipio_org" placeholder='Digite seu bairro' autoComplete='off'/>
+                </div>
+            </div>
+
+            <div class="elemento">
+                <div>
+                    <label> Cep <br></br></label>
+                    <input class="inputgeral" style="width: 100%;" type='text' name = "cep_org" id="cep_org" placeholder='*****-***' autoComplete='off'/>
+                </div>
+            </div>
+            <div class="elemento">
+                <div>
+                    <label>Estado<br></br></label>
+                    <select class="selectgeral" style="width: 100%;"   autoComplete='off'>
+                        <option value=""></option>
+                        <option value="PE">PE</option>
+                        <option value="RO">RO</option>
+                        <option value="AC">AC</option>
+                        <option value="AM">AM</option>
+                        <option value="RR">RR</option>
+                        <option value="PA">PA</option>
+                        <option value="AP">AP</option>
+                        <option value="TO">TO</option>
+                        <option value="MA">MA</option>
+                        <option value="PI">PI</option>
+                        <option value="CE">CE</option>
+                        <option value="RN">RN</option>
+                        <option value="PB">PB</option>
+                        <option value="AL">AL</option>
+                        <option value="SE">SE</option>
+                        <option value="BA">BA</option>
+                        <option value="MG">MG</option>
+                        <option value="ES">ES</option>
+                        <option value="RJ">RJ</option>
+                        <option value="SP">SP</option>
+                        <option value="PR">PR</option>
+                        <option value="SC">SC</option>
+                        <option value="RS">RS</option>
+                        <option value="MS">MS</option>
+                        <option value="MT">MT</option>
+                        <option value="GO">GO</option>
+                        <option value="DF">DF</option>
+                    </select>
+                </div>
+            </div>
+            <div class="elemento">
+                <div>
+                    <label> Email<br></br></label> 
+                    <input class="inputgeral" style="width: 100%;" type='text' name = "email_org" id="email_org" placeholder='Exemplo@email.com' autoComplete='off'/>
+                </div>
+            </div>
+            <div class="elemento">
+                <div>
+                    <label> Telefone<br></br></label> 
+                    <input class="inputgeral" style="width: 100%;" name = "telefone_org" id="telefone_org" type='text' placeholder=' ( * * ) * * * * * - * * * * ' autoComplete='off'/>
+                </div>
+                <div class="elemento">
+                <div>
+                    <label> Telefone 02<br></br></label> 
+                    <input class="inputgeral" style="width: 100%;" name = "telefone2_org" id="telefone2_org" type='text' placeholder=' ( * * ) * * * * * - * * * * ' autoComplete='off'/>
+                </div>    
+            
+        </section>
+        <div class="di">
+            <button class="submitbtn" type="submit" name ="submit">Enviar</button> 
+            <button class="cancelbtn" id="fecharorgao">Cancelar</button> 
+            <button class="btn_acao" type='btn_acao'>Listar</button>
+        </div>
+    </form>
+</div>

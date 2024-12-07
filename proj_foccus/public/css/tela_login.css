@@ -1,0 +1,95 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #cf661b, #ffffff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+.login-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 40px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+h1 {
+    margin: 0 0 20px;
+    font-size: 2em;
+}
+
+p {
+    margin: 0 0 20px;
+    font-size: 1.1em;
+    color: #ddd;
+}
+
+.login-form label {
+    display: block;
+    margin: 10px 0 5px;
+    text-align: left;
+}
+
+.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    font-size: 1em;
+}
+
+.login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #e2a865;
+    border: none;
+    border-radius: 5px;
+    color: #e07319;
+    font-size: 1.2em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.login-form button:hover {
+    background-color: #ffffff;
+}
+.sobre-nos-link {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+.sobre-nos-link a {
+    color: #6e8efb;
+    text-decoration: none;
+    font-weight: bold;
+}
+.sobre-nos-link a:hover {
+    text-decoration: underline;
+}
+
+
+
+.register-link {
+    margin-top: 10px;
+    font-size: 0.9em;
+}
+
+.register-link a {
+    color: #6e8efb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}

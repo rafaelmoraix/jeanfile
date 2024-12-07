@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário Dinâmico</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 20px;
+    }
+    .form-container {
+      max-width: 800px;
+      background: #ffffff;
+      padding: 20px;
+      margin: auto;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    h1 {
+      font-size: 24px;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .checkbox-group {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+    .checkbox-group label {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      background: #f7f7f7;
+      padding: 8px;
+      border-radius: 5px;
+      box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    .checkbox-group input {
+      margin-right: 10px;
+      transform: scale(1.2);
+    }
+
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: #555;
+    }
+    .form-group select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+    
+
+    button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background: #4CAF50;
+      color: #fff;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    button:hover {
+      background: #45a049;
+    }
+  </style>
+</head>
+<body>
+
+<div class="form-container">
+  <!-- Título -->
+  <h1>Formulário de Tópicos</h1>
+
+  <!-- Campo de seleção de tópico -->
+  <div class="form-group">
+    <label for="topic-select">Selecione um tópico:</label>
+    <select id="topic-select" name="topic" required>
+      <option value="" disabled selected>Escolha um tópico</option>
+      <option value="Amplia gradativamente seu vocabulário?">Amplia gradativamente seu vocabulário?</option>
+      <option value="Apresenta entonação vocal, com boa articulação e ritmo adequado?">Apresenta entonação vocal, com boa articulação e ritmo adequado?</option>
+      <option value="Ativa conhecimentos prévios em situações de novas aprendizagens?">Ativa conhecimentos prévios em situações de novas aprendizagens?</option>
+      <option value="Categoriza diferentes elementos de acordo com critérios preestabelecidos?">Categoriza diferentes elementos de acordo com critérios preestabelecidos?</option>
+      <option value="Compreende o uso de gestos/comunicação não verbal?">Compreende o uso de gestos/comunicação não verbal?</option>
+      <option value="Compreende que pode receber ajuda de pessoas conhecidas que estão ao seu redor?">Compreende que pode receber ajuda de pessoas conhecidas que estão ao seu redor?</option>
+      <option value="Comunica fatos, acontecimentos e ações de seu cotidiano de modo compreensível, ainda que não seja por meio da linguagem verbal?">Comunica fatos, acontecimentos e ações de seu cotidiano de modo compreensível, ainda que não seja por meio da linguagem verbal?</option>
+      <option value="Comunica suas necessidades básicas (banheiro, água, comida, entre outros)?">Comunica suas necessidades básicas (banheiro, água, comida, entre outros)?</option>
+      <option value="Entende as expressões faciais em uma conversa?">Entende as expressões faciais em uma conversa?</option>
+      <option value="Executa mais de um comando sequencialmente?">Executa mais de um comando sequencialmente?</option>
+      <option value="Expressa-se oralmente com clareza e objetividade?">Expressa-se oralmente com clareza e objetividade?</option>
+      <option value="Faz uso de expressões faciais para se comunicar?">Faz uso de expressões faciais para se comunicar?</option>
+      <option value="Faz uso de gestos para comunicar-se?">Faz uso de gestos para comunicar-se?</option>
+      <option value="Identifica diferentes objetos, ampliando seu repertório?">Identifica diferentes objetos, ampliando seu repertório?</option>
+      <option value="Identifica semelhanças e diferenças entre elementos?">Identifica semelhanças e diferenças entre elementos?</option>
+      <option value="Inicia uma situação comunicativa?">Inicia uma situação comunicativa?</option>
+      <option value="Mantem uma situação comunicativa?">Mantem uma situação comunicativa?</option>
+      <option value="Nomeia as pessoas que fazem parte de sua rede de apoio?">Nomeia as pessoas que fazem parte de sua rede de apoio?</option>
+      <option value="Nomeia diferentes objetos, ampliando seu vocabulário?">Nomeia diferentes objetos, ampliando seu vocabulário?</option>
+      <option value="Possui autonomia para se comunicar, mesmo nas situações que geram conflito?">Possui autonomia para se comunicar, mesmo nas situações que geram conflito?</option>
+      <option value="Realiza pareamento?">Realiza pareamento?</option>
+      <option value="Reconhece e pareia elementos idênticos ou diferentes?">Reconhece e pareia elementos idênticos ou diferentes?</option>
+      <option value="Reconhece visualmente os estímulos apresentados?">Reconhece visualmente os estímulos apresentados?</option>
+      <option value="Refere-se a si mesmo em primeira pessoa?">Refere-se a si mesmo em primeira pessoa?</option>
+      <option value="Respeita o turno de fala?">Respeita o turno de fala?</option>
+      <option value="Responde ao ouvir seu nome?">Responde ao ouvir seu nome?</option>
+      <option value="Solicita ajuda de pessoas que estão ao seu redor, quando necessária?">Solicita ajuda de pessoas que estão ao seu redor, quando necessária?</option>
+      <option value="Utiliza linguagem não verbal para comunicar-se?">Utiliza linguagem não verbal para comunicar-se?</option>
+      <option value="Utiliza linguagem verbal para comunicar-se?">Utiliza linguagem verbal para comunicar-se?</option>
+      <option value="Utiliza respostas simples para se comunicar?">Utiliza respostas simples para se comunicar?</option>
+      <option value="Utiliza vocabulário adequado, de acordo com seu nível de desenvolvimento?">Utiliza vocabulário adequado, de acordo com seu nível de desenvolvimento?</option>
+
+      <!-- Adicione mais tópicos aqui se necessário -->
+    </select>
+  </div>
+  
+  <!-- Formulário -->
+  <form id="dynamic-form">
+    <div class="checkbox-group">
+      <label><input type="checkbox" name="question[]" value="Adapta-se a mudanças com flexibilidade em sua rotina (familiar, escolar e social)?"> Adapta-se a mudanças com flexibilidade em sua rotina (familiar, escolar e social)?</label>
+      <label><input type="checkbox" name="question[]" value="Apresenta autonomia na realização das atividades propostas?"> Apresenta autonomia na realização das atividades propostas?</label>
+      <label><input type="checkbox" name="question[]" value="Apresenta habilidades motoras em atividades que envolvem movimento?"> Apresenta habilidades motoras em atividades que envolvem movimento?</label>
+      <label><input type="checkbox" name="question[]" value="Compreende acontecimentos de sua rotina por meio de ilustrações?"> Compreende acontecimentos de sua rotina por meio de ilustrações?</label>
+      <label><input type="checkbox" name="question[]" value="Compreende as regras de convivência?"> Compreende as regras de convivência?</label>
+      <label><input type="checkbox" name="question[]" value="Entende as ações de autocuidado?"> Entende as ações de autocuidado?</label>
+      <label><input type="checkbox" name="question[]" value="Faz uso de movimentos corporais, como por exemplo: apontar, movimentar a cabeça em sinal afirmativo/negativo, entre outros?"> Faz uso de movimentos corporais, como por exemplo: apontar, movimentar a cabeça em sinal afirmativo/negativo, entre outros?</label>
+      <label><input type="checkbox" name="question[]" value="Imita gestos, movimentos e segue comandos?"> Imita gestos, movimentos e segue comandos?</label>
+      <label><input type="checkbox" name="question[]" value="Inicia e finaliza as atividades propostas diariamente?"> Inicia e finaliza as atividades propostas diariamente?</label>
+      <label><input type="checkbox" name="question[]" value="Interage nos momentos de jogos, lazer e demais atividades, respeitando as regras de convivência?"> Interage nos momentos de jogos, lazer e demais atividades, respeitando as regras de convivência?</label>
+      <label><input type="checkbox" name="question[]" value="Mantem a organização na sua rotina escolar?"> Mantem a organização na sua rotina escolar?</label>
+      <label><input type="checkbox" name="question[]" value="Permanece sentado por mais de 10 minutos, para realização das atividades?"> Permanece sentado por mais de 10 minutos, para realização das atividades?</label>
+      <label><input type="checkbox" name="question[]" value="Realiza as atividades com atenção e tolerância?"> Realiza as atividades com atenção e tolerância?</label>
+      <label><input type="checkbox" name="question[]" value="Autorregula-se, evitando comportamento disruptivo em situações de desconforto?"> Autorregula-se, evitando comportamento disruptivo em situações de desconforto?</label>
+      <label><input type="checkbox" name="question[]" value="Realiza, em sua rotina, ações de autocuidado com autonomia?"> Realiza, em sua rotina, ações de autocuidado com autonomia?</label>
+      <label><input type="checkbox" name="question[]" value="Reconhece e identifica alimentos que lhe são oferecidos?"> Reconhece e identifica alimentos que lhe são oferecidos?</label>
+      <label><input type="checkbox" name="question[]" value="Responde a comando de ordem direta?"> Responde a comando de ordem direta?</label>
+    </div>
+
+    <button type="submit">Enviar</button>
+  </form>
+</div>
+
+<script>
+  const form = document.getElementById('dynamic-form');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault(); // Evita o recarregamento da página
+
+    alert('Formulário enviado com sucesso!');
+    form.reset();
+  });
+</script>
+
+</body>
+</html>
